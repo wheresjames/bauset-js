@@ -1,0 +1,29 @@
+{
+  "name": "%NAME%",
+  "version": "%VERSION%",
+  "description": "%DESCRIPTION%",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "bin": {
+    "%NAME%": "bin/%NAME%.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "%REPO%"
+  },
+  "dependencies": {
+  },
+  "keywords": [
+    "npm",
+    "install",
+    "package"
+  ],
+  "author": "%AUTHOR%",
+  "license": "%LICENSE%",
+  "bugs": {
+    "url": "%URL%/issues"
+  },
+  "homepage": "%URL%"
+}

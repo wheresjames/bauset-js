@@ -1,0 +1,10 @@
+name            bauset
+version         0.1.1
+description     Simple npm Package builder
+company         wheresjames
+author          Robert Umbehant
+email           bauset@wheresjames.com
+url             https://github.com/wheresjames/bauset-js
+repo            git+ssh://git@github.com/wheresjames/bauset-js.git
+bugs            https://github.com/wheresjames/bauset-js/issues
+license         MIT
