@@ -1,6 +1,27 @@
 
 # bauset
 
+---------------------------------------------------------------------
+## Table of contents
+
+* [Install](#install)
+* [Overview](#overview)
+* [How to use](#how-to)
+* [References](#references)
+
+&nbsp;
+
+---------------------------------------------------------------------
+## Install
+
+    $ npm install bauset
+
+&nbsp;
+
+
+---------------------------------------------------------------------
+## Overview
+
 npm package builder.
 
 npm is wonderful, and fully capable on it's own of building packages.
@@ -54,20 +75,6 @@ To get started, you can simply make a copy of this project and modify it.
     bauset.createPackage('/path/to/project/root', '/destination/path' {install:false, global:false});
 
 ```
-
----------------------------------------------------------------------
-## Table of contents
-
-* [Install](#install)
-* [How to use](#how-to)
-* [References](#references)
-
-&nbsp;
-
----------------------------------------------------------------------
-## Install
-
-    $ npm install bauset
 
 &nbsp;
 
