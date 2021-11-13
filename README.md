@@ -82,8 +82,6 @@ To get started, you can simply make a copy of this project and modify it.
 ---------------------------------------------------------------------
 ## How To
 
-Bauset will only run in a unix like environment.
-
 Bauset expects the input directory to look like the following
 
 ```
