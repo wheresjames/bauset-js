@@ -1,14 +1,12 @@
-#!/usr/bin/env nodejs
+#!/usr/bin/env node
 'use strict'
 
 const fs = require('fs');
 const path = require('path');
-const Log = console.log;
+var Log = console.log;
 
 function main()
 {
-    console.log(process.argv);
-
     // Check for bootstrap flag
     let bootstrap = false;
     for (let k in process.argv)
@@ -27,14 +25,27 @@ function main()
     const bauset = require(bsReq);
 
     // Parse command line
-    let _p = bauset.parseParams(process.argv,
-        {
-            'i':'install',
-            'g': 'global',
-            's': 'source',
-            't': 'test'
-        });
-    Log("Options", _p);
+    let _p = bauset.__config__.parseParams('bauset [options] [commands ...]', process.argv,
+        [   ['i', 'install',            'Specify if package should be installed'],
+            ['g', 'global',             'Specify if package should be installed globally'],
+            ['s', 'source',             'Location of source files / defaults to current directory'],
+            ['v', 'version',            'Show version'],
+            ['V', 'verbose',            'Verbose logging']
+        ]);
+
+    // Verbose mode?
+    if (_p.verbose)
+    {   try { const sparen = require('sparen'); Log = sparen.log;
+        } catch(e) { Log = console.log; }
+        Log('Program Info: ', JSON.stringify(bauset.__info__, null, 2));
+        Log('Program Arguments: ', JSON.stringify(_p, null, 2));
+    }
+
+    if (_p.version)
+        return Log(bauset.__info__.version);
+
+    if (_p.help)
+        return Log(_p.help);
 
     // Calculate source and destination folders
     let cwd = process.cwd();
