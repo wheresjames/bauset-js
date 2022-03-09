@@ -1,4 +1,9 @@
 
+# v0.1.3 - 2022-03-08
+
+[+] Recursive option
+[+] More consistent commandline handling of =
+
 # v0.1.2 - 2022-02-16
 
 [+] Improved command line parsing

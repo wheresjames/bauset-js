@@ -29,6 +29,7 @@ function main()
         [   ['i', 'install',            'Specify if package should be installed'],
             ['g', 'global',             'Specify if package should be installed globally'],
             ['s', 'source',             'Location of source files / defaults to current directory'],
+            ['r', 'recursive',          'Recurse into sub directories'],
             ['v', 'version',            'Show version'],
             ['V', 'verbose',            'Verbose logging']
         ]);
